@@ -1,0 +1,213 @@
+\documentclass[12pt, oneside]{book}
+
+% --- Packages for styling ---
+\usepackage[utf8]{inputenc}
+\usepackage{mathptmx} % Sets font to Times New Roman
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\geometry{letterpaper, margin=1.2in}
+\usepackage{titlesec} % For styling headings
+\usepackage{booktabs}
+\usepackage{gensymb}
+\usepackage{tabularx}
+
+% --- Customizing Chapter Headings ---
+\titleformat{\chapter}[display]
+  {\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
+
+\begin{document}
+
+% --- Cover Page ---
+\begin{titlepage}
+    \centering
+    \vspace*{5cm}
+    {\Huge \bfseries Mathematics: Geo-Stats (Full Year)} \\[1.5cm]
+    {\Large Noah Kleedtke} \\
+    {\Large kleedtke@gmail.com} \\
+    \vfill
+\end{titlepage}
+
+% --- Table of Contents ---
+\frontmatter
+\tableofcontents
+
+% --- Chapter 1 ---
+% introduction and references
+\mainmatter
+\chapter{Introduction}
+
+The ``Geo-Stats'' course covers geometry and statistics. Specifically the course covers standards included here (web.ped.nm.gov). This textbook is a collection of notes used for the series presented on North Mesa Math YouTube channel (youtube.com/@NorthMesaMath).
+
+\chapter{Congruence}
+
+\begin{table}[h]
+    \centering
+    \caption{Course standards and associated information.}
+    \vspace{0.3cm} % Adds a small gap between caption and table
+    \begin{tabularx}{\textwidth}{l X} % 'll' means two left-aligned columns
+        \toprule
+        \textbf{Standard} & \textbf{Detailed Explanation} \\
+        \midrule
+        HSG.CO.A.1 & Know precise defintions of angle, circle, perpendicular line, parallel line, and line segment, based on the undefined notions of point, line, distance along a line, and distance around a circular arc. \\
+        HSG.CO.A.2 & Represent transformations in the plane using, e.g., transparencies and geometry software; describe transformations as functions that take points in the plane as inputs and give other points as outputs. Compare transformations that preserve distance and angle to those that do not (e.g., translation versus horizontal stretch). \\
+        None & Understand congruence in terms of rigid motions \\
+        HSG.CO.B.8 & Explain how the criteria for triangle congruence (ASA, SAS, and SSS) follow from the definition of congruence in terms of rigid motions. \\
+        None & Prove geometric theorems \\
+        HSG.CO.C.9 & Prove theorems about lines and angles. Theorems include: vertical angles are congruent; when a transversal crosses parallel lines, alternate interior angles are congruent and corresponding angles are congruent; points on a perpendicular bisector of a line segment are exactly those equidistant from the segment's endpoints. \\
+        HSG.CO.C.10 & Prove theorems about triangles. Theorems include; measures of interior angles of a triangle sum to $180\degree$; base angles of isosceles triangles are congruent; the segment joining midpoints of two sides of a triangle is parallel to the third side and half the length; the medians of a triangle meet at a point. \\
+        \bottomrule
+    \end{tabularx}
+\end{table}
+
+\chapter{Similarity, Right Triangles, \& Trigonometry}
+
+\begin{table}[h]
+    \centering
+    \caption{Course standards and associated information.}
+    \vspace{0.3cm} % Adds a small gap between caption and table
+    \begin{tabularx}{\textwidth}{l X} % 'll' means two left-aligned columns
+        \toprule
+        \textbf{Standard} & \textbf{Detailed Explanation} \\
+        \midrule
+        HSG.SRT.B.4 & Prove theorems about traingles. THeorems include: a line parallel to one side of a triaangle dividies the other two proportionally, and conversely; the Pythagorean Theorem proved using triangle similarity. \\
+        HSG.SRT.B.5 & Use congruence and similarity criteria for triangles to solve problems and to prove relationships in geometric figures. \\
+        None & Define trigonometric ratios and solve problems incolving right triangles. \\
+        HSG.SRT.C.6 & Understand that by similarity , side ratios in right triangles ar eproperties of the angles in the triangle, leading to definitions of trigonometric ratios for acute angles. \\
+        HSG.SRT.C.8 & Use trigonometric ratios and the Pythagorean Theomrem to solve right triangles in applied problems. \\
+        \bottomrule
+    \end{tabularx}
+\end{table}
+
+\chapter{Circle}
+
+\begin{table}[h]
+    \centering
+    \caption{Course standards and associated information.}
+    \vspace{0.3cm} % Adds a small gap between caption and table
+    \begin{tabularx}{\textwidth}{l X} % 'll' means two left-aligned columns
+        \toprule
+        \textbf{Standard} & \textbf{Detailed Explanation} \\
+        \midrule
+        HSG.C.A.2 & Identify and describe relationships among inscribed angles, radii, and chords. Include the relationship between central, inscribed, and circumscribed angles; inscribed angles on a diameter are right angles; the radius of a circle is perpendicular to the tangent where the radius intersects the circle. \\
+        HSG.C.A.3 & Construct the inscribed and circumscribed circles of a triangle, and prove properties of angles for a quadrilateral inscribed in a circle. \\
+        None & Find arc lengths an dareas of sectors of circles. \\
+        HSG.C.B.5 & Derive using similarity the fact that the length of the arc intercepted by an angle is prportional to the radius, and define the radian measure fo the angle as the constant of proportionality; derive the formula for the area of a sector. \\
+        \bottomrule
+    \end{tabularx}
+\end{table}
+
+\chapter{Expressing Geometric Properties with Equations}
+
+\begin{table}[h]
+    \centering
+    \caption{Course standards and associated information.}
+    \vspace{0.3cm} % Adds a small gap between caption and table
+    \begin{tabularx}{\textwidth}{l X} % 'll' means two left-aligned columns
+        \toprule
+        \textbf{Standard} & \textbf{Detailed Explanation} \\
+        \midrule
+        None & Translate between the geometric description adn the equation for a conic section. \\
+        HSG.GPE.A.1 & Derive teh equation of a circle of given center and radius using the Pythagorean Theorem; complete the square to find the center and radius fo a circle given by an equation. \\
+        None & Use coordinates to prove simple geometric theorems algebraically \\
+        HSG.GPE.B.5 & Prove the slope criteria for parallel and perpendicular lines and use them to solve geometric problems (e.g., find the equation of a line parallel or perpendicular to a given line that passes through a given point). \\
+        HSG.GPE.B.7 & Use coordinates to compute perimeters of polygons and areas of triangles and rectangles, e.g., using the distance formula. \\
+        \bottomrule
+    \end{tabularx}
+\end{table}
+
+\chapter{Geometric Measurement \& Dimension}
+
+\begin{table}[h]
+    \centering
+    \caption{Course standards and associated information.}
+    \vspace{0.3cm} % Adds a small gap between caption and table
+    \begin{tabularx}{\textwidth}{l X} % 'll' means two left-aligned columns
+        \toprule
+        \textbf{Standard} & \textbf{Detailed Explanation} \\
+        \midrule
+        HSG.GMD.A.3 & Use volume formulas for cylinders, pyramids, cones, and spheres to solve problems. \\
+        \bottomrule
+    \end{tabularx}
+\end{table}
+
+\chapter{Modeling with Geometry}
+
+\begin{table}[h]
+    \centering
+    \caption{Course standards and associated information.}
+    \vspace{0.3cm} % Adds a small gap between caption and table
+    \begin{tabularx}{\textwidth}{l X} % 'll' means two left-aligned columns
+        \toprule
+        \textbf{Standard} & \textbf{Detailed Explanation} \\
+        \midrule
+        None & Apply geometric concepts in modeling situations. \\
+        HSG.MG.A.1 & Use geometric shapes, their measures, adn their properties to describe objects (e.g., modeling a tree trunk of a human torso as a cylinder). \\
+        HSG.MG.A.2 & Apply concepts of density based on area and volume in modeling situations (e.g., persons per square mile, BTUs per cubic foot). \\
+        HSG.MG.A.3 & Apply geometric methods to solve design problems (e.g., designing an object or structure to satisfy physical constraints or minimize cost; working with typographic grid systems based on ratios). \\
+        \bottomrule
+    \end{tabularx}
+\end{table}
+
+\chapter{Conditional Probability \& the Rules of Probability}
+
+\begin{table}[h]
+    \centering
+    \caption{Course standards and associated information.}
+    \vspace{0.3cm} % Adds a small gap between caption and table
+    \begin{tabularx}{\textwidth}{l X} % 'll' means two left-aligned columns
+        \toprule
+        \textbf{Standard} & \textbf{Detailed Explanation} \\
+        \midrule
+        HSS.CP.A.1 & Describe events as subsets of a sample space (the set of outcomes) using characteristics (or categories) of the outcomes, or as unions, intersections, or complements of other events (``or,'' ``and,'' ``not''). \\
+        HSS.CP.A.2 & Understand that two events A and B are independent if the probability of A and B occurring together is the product of their probabilities, and use thsi characterization to determine if they are independent. \\
+        HSS.CP.A.4 & Construct and interpret two-way frequency tables fo data when two categories are associated with each object being classified. Use the two-way table as a sample space to decide if events are independent and to approximate conditional probabilities. For example, collect data from a random sample of students in your school on their favorite subject among math, science, and English. Estimate the probability that a randomly selected student from your school will favor science given that the student is in tenth grade. Do the same fo other subjects and compare the results. \\
+        \bottomrule
+    \end{tabularx}
+\end{table}
+
+\chapter{Making Inferences \& Justifying Conclusions}
+
+\begin{table}[h]
+    \centering
+    \caption{Course standards and associated information.}
+    \vspace{0.3cm} % Adds a small gap between caption and table
+    \begin{tabularx}{\textwidth}{l X} % 'll' means two left-aligned columns
+        \toprule
+        \textbf{Standard} & \textbf{Detailed Explanation} \\
+        \midrule
+        HSS.IC.A.1 & Understand statistics as a process for making inferences about population parameters based on a random sample from that population. \\
+        HSS.IC.A.2 & Decide if a specified model is consistent with results from a given data-generating process, e.g., using simulation. For example, a model says a spinning coin falls heads up with probability 0.5. Would a result of 5 tails in a row cause you to question the model? \\
+        None & Make inferences and justify conclusions from sample surveys, experiments, and observational studies. \\
+        HSS.IC.B.4 & Use data from a sample survey to estimate a population mean or proportion; develop a margin of error through the use of simulation models for random sampling. \\
+        HSS.IC.B.6 & Evaluate reports based on data. \\
+        \bottomrule
+    \end{tabularx}
+\end{table}
+
+\chapter{Interpreting Categorical \& Quantitative Data}
+
+\begin{table}[h]
+    \centering
+    \caption{Course standards and associated information.}
+    \vspace{0.3cm} % Adds a small gap between caption and table
+    \begin{tabularx}{\textwidth}{l X} % 'll' means two left-aligned columns
+        \toprule
+        \textbf{Standard} & \textbf{Detailed Explanation} \\
+        \midrule
+        HSS.ID.A.1 & Represent data with plots on the real number line (dot plots, histograms, and box plots). \\
+        HSS.ID.A.2 & Use statistics appropriate to the shape of the data distribution to compare center (median, mean) and spread (interquartile range, standard deviation) of two or more different data sets. \\
+        HSS.ID.A.3 & Interpret differences in shape, center, and spread in the context of the data sets, accounting for possible effects of extreme data points (outliers). \\
+        None & Summarize, represent, and interpret data on two categorical and quantitative variables. \\
+        HSS.ID.B.5 & Summarize categorical data for two categories in two-way frequency tables. Interpret relative frequencies in the context of the data (including joint, marginal, and conditional relative frequencies). Recognize possible associations and trends in the data. \\
+        HSS.ID.B.6 & (a) Fit a function to the data; use functions fitted to data to solve problems in the context of the data. Use given functions or choose a function suggested by the context. Emphasize linear, quadratic, and exponential models. (b) Informally assess the fit of a function by plotting and analyzing residuals. (c) Fit a linear function for a scatter plot that suggests a lienar association. \\
+        None & Interpret linear models. \\
+        HSS.ID.C.7 & Interpret the slope (rate of change) and the intercept (constant term) of a linear model in the context of the data. \\
+        \bottomrule
+    \end{tabularx}
+\end{table}
+
+\chapter{Concluding Remarks}
+
+That was a lot of information. Congrats on making it this far!
+
+\end{document}
