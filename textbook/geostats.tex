@@ -10,6 +10,22 @@
 \usepackage{booktabs}
 \usepackage{gensymb}
 \usepackage{tabularx}
+\usepackage{amsmath}
+
+\usepackage{xcolor}
+\usepackage{hyperref}
+\definecolor{terracotta}{RGB}{226, 114, 91}
+\hypersetup{
+    colorlinks=true,    % Turns off the boxes around links
+    linkcolor=black,     % Color for internal links (sections, TOC)
+    citecolor=terracotta,      % Citations
+    filecolor=terracotta,      % Local files
+    urlcolor=terracotta,       % Websites
+    menucolor=terracotta,      % Acrobat menu items
+    runcolor=terracotta,       % Run links
+    anchorcolor=terracotta,    % Anchors
+    pdftitle={North Mesa Math: Geo-Stats},
+}
 
 % --- Customizing Chapter Headings ---
 \titleformat{\chapter}[display]
@@ -21,7 +37,7 @@
 \begin{titlepage}
     \centering
     \vspace*{5cm}
-    {\Huge \bfseries Mathematics: Geo-Stats (Full Year)} \\[1.5cm]
+    {\Huge \bfseries North Mesa Math: Geo-Stats} \\[1.5cm]
     {\Large Noah Kleedtke} \\
     {\Large kleedtke@gmail.com} \\
     \vfill
@@ -36,7 +52,7 @@
 \mainmatter
 \chapter{Introduction}
 
-The ``Geo-Stats'' course covers geometry and statistics. Specifically the course covers standards included here (web.ped.nm.gov). This textbook is a collection of notes used for the series presented on North Mesa Math YouTube channel (youtube.com/@NorthMesaMath).
+The ``Geo-Stats'' course is a full-year course that covers geometry and statistics. Specifically, the course covers the standards outline included \href{web.ped.nm.gov}{here}. This textbook is a collection of notes used for the series presented on North Mesa Math Youtube \href{youtube.com/@NorthMesaMath}{channel}.
 
 \chapter{Congruence}
 
@@ -58,6 +74,46 @@ The ``Geo-Stats'' course covers geometry and statistics. Specifically the course
         \bottomrule
     \end{tabularx}
 \end{table}
+
+\subsection{Definitions}
+Line 1 and Line 2 are denoted $l_1$ and $l_2$, respectively. \\
+\textbf{Point}: A location. No size, no dimension.  \\
+\textbf{Line}: Straight, infinite in both directions. \\
+\textbf{Distance along a line}: How far apart two points are, measured straight. \\
+\textbf{Distance around a circular arc} ($\overset{\frown}{AB}$): Length of a curved path between two points on a circle. \\
+\textbf{Angle} ($\angle ABC$): Two rays sharing a common endpoint (the vertex). Its measure is the rotation between the rays, in degrees ($\degree$) or radians (rad). \\
+\textbf{Circle}: All points in a plan at a fixed distance along a line from a center point. The boundary length uses distance around a circular arc. \\
+\textbf{Perpendicular lines} ($l_1 \perp l_2$): Two lines that intersect and form a $90\degree$ angle at their intersection. \\
+\textbf{Parallel lines} ($l_1 \parallel l_2$): Two lines in a plane that never intersect. \\
+\textbf{Line segment}: All points on a line between two endpoints. Its length is a distance along a line. \\
+
+\subsection{Formulas}
+Distance ($d$) between points ($x_1$,$y_1$) and ($x_2$,$y_2$): $d = \sqrt{(\Delta x)^2 + (\Delta y)^2} = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$ \\
+Distance ($d$) between point ($x_1$,$y_1$) and line ($Ax + By + C = 0$):  $d = \frac{ \left | Ax_1 + By_1 + C \right | }{\sqrt{A^2 + B^2}} $ \\
+Arc length ($s$) with angle ($\theta$) (rad): $s = r \theta$ \\
+Arc length ($s$) with angle ($\theta$) ($\degree$): $s = 2\pi r \times \frac{\theta}{360}$ \\
+Circumference ($C$) with radius ($r$): $C = 2 \pi r$ \\
+
+\subsection{Examples}
+Question 1: What is the distance between point ($x_1$,$y_1$) and line $y=mx+b$? \\
+\begin{center}    
+    Use distance between point and line formula. \\ 
+    $d = \frac{ \left | Ax_1 + By_1 + C \right | }{\sqrt{A^2 + B^2}} $ \\
+    Recognize line has to be re-written into correct equation structure. \\
+    $y=mx+b$ \\
+    Rearrange equation to $mx - y + b=0$. \\
+    Substitute variables into original equation. \\
+    $d = \frac{ \left | (m)(x_1) + (-1)(y_1) + (b) \right | }{\sqrt{(-m)^2 + (1)^2}} $ \\
+    $d = \frac{ \left | mx_1 - y_1 + b \right |}{\sqrt{m^2 + 1}}$ \\
+\end{center}
+
+\noindent Question 2: I have an inscribed angle $\angle ABC$ of $rd$. What is the arc length $\overset{\frown}{AC}$ in both radians and degrees? \\
+\begin{center}
+    Arc length ($s$) with angle ($\theta$) (rad): $s = r \theta$ \\
+    Arc length ($s$) with angle ($\theta$) ($\degree$): $s = 2\pi r \times \frac{\theta}{360}$ \\
+\end{center}
+
+\subsection{Exercises}
 
 \chapter{Similarity, Right Triangles, \& Trigonometry}
 
