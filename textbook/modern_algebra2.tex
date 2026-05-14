@@ -1,0 +1,235 @@
+\documentclass[12pt, oneside]{book}
+
+% --- Packages for styling ---
+\usepackage[utf8]{inputenc}
+\usepackage{mathptmx} % Sets font to Times New Roman
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\geometry{letterpaper, margin=1.2in}
+\usepackage{titlesec} % For styling headings
+\usepackage{booktabs}
+\usepackage{gensymb}
+\usepackage{tabularx}
+\usepackage{amsmath}
+
+\usepackage{xcolor}
+\usepackage{hyperref}
+\definecolor{terracotta}{RGB}{226, 114, 91}
+\hypersetup{
+    colorlinks=true,    % Turns off the boxes around links
+    linkcolor=black,     % Color for internal links (sections, TOC)
+    citecolor=terracotta,      % Citations
+    filecolor=terracotta,      % Local files
+    urlcolor=terracotta,       % Websites
+    menucolor=terracotta,      % Acrobat menu items
+    runcolor=terracotta,       % Run links
+    anchorcolor=terracotta,    % Anchors
+    pdftitle={North Mesa Math: Geo-Stats},
+}
+
+% --- Customizing Chapter Headings ---
+\titleformat{\chapter}[display]
+  {\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
+
+\begin{document}
+
+% --- Cover Page ---
+\begin{titlepage}
+    \centering
+    \vspace*{5cm}
+    {\Huge \bfseries North Mesa Math: Modern Algebra 2} \\[1.5cm]
+    {\Large Noah Kleedtke} \\
+    {\Large kleedtke@gmail.com} \\
+    \vfill
+\end{titlepage}
+
+% --- Table of Contents ---
+\frontmatter
+\tableofcontents
+
+% --- Chapter 1 ---
+% introduction and references
+\mainmatter
+\chapter{Introduction}
+
+The ``Modern Algebra 2'' course is part of the re-envisioned high school math pathways implementation \href{https://docs.google.com/document/d/1_troJgcLZ26nQNs2aGX06zfQDgV2aJ5XbGDfhzA-p6I/edit?tab=t.0}{plan}. This course is one semester to be taught over the course of half a year. Specifically, the course covers the standards outline included \href{web.ped.nm.gov}{here}. This textbook is a collection of notes used for the series presented on North Mesa Math Youtube \href{youtube.com/@NorthMesaMath}{channel}.
+
+\chapter{Arithmetic with Polynomials \& Rational Expressions}
+
+\begin{table}[h]
+    \centering
+    \caption{Course standards and associated information.}
+    \vspace{0.3cm} % Adds a small gap between caption and table
+    \begin{tabularx}{\textwidth}{l X} % 'll' means two left-aligned columns
+        \toprule
+        \textbf{Standard} & \textbf{Detailed Explanation} \\
+        \midrule
+        None & Perform arithmetic operations on polynomials. \\
+        HSA.APR.A.1 & Understand that polynomials form a system analogous to the integers, namely, they are closed under the operations of addition, subtraction, and multiplication; add, subtract, and multiply polynomials. \\
+        None & Understand the relationship between zeros adn factors of polynomials. \\
+        HSA.APR.B.3 & Identify zeros of polynomials when suitable factorizations are available adn use the zeros to construct a rough graph of the function defined by the polynomial. \\
+        None & Rewrite rational expressions. \\
+        HSA.APR.D.6 & Rewrite simple rational expressions in different forms; write a(x)/b(x) in teh form q(x)+r(x)/b(x), where a(x), b(x), q(x), and r(x) are polynomials with the degree of r(x) less than the degree of b(x), using inspection, long division, or, for the more complicated examples, a computer algebra system. \\
+        \bottomrule
+    \end{tabularx}
+\end{table}
+
+\subsection{Definitions}
+Line 1 and Line 2 are denoted $l_1$ and $l_2$, respectively. \\
+\textbf{Point}: A location. No size, no dimension.  \\
+\textbf{Line}: Straight, infinite in both directions. \\
+\textbf{Distance along a line}: How far apart two points are, measured straight. \\
+\textbf{Distance around a circular arc} ($\overset{\frown}{AB}$): Length of a curved path between two points on a circle. \\
+\textbf{Angle} ($\angle ABC$): Two rays sharing a common endpoint (the vertex). Its measure is the rotation between the rays, in degrees ($\degree$) or radians (rad). \\
+\textbf{Circle}: All points in a plan at a fixed distance along a line from a center point. The boundary length uses distance around a circular arc. \\
+\textbf{Perpendicular lines} ($l_1 \perp l_2$): Two lines that intersect and form a $90\degree$ angle at their intersection. \\
+\textbf{Parallel lines} ($l_1 \parallel l_2$): Two lines in a plane that never intersect. \\
+\textbf{Line segment}: All points on a line between two endpoints. Its length is a distance along a line. \\
+
+\subsection{Formulas}
+Distance ($d$) between points ($x_1$,$y_1$) and ($x_2$,$y_2$): $d = \sqrt{(\Delta x)^2 + (\Delta y)^2} = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$ \\
+Distance ($d$) between point ($x_1$,$y_1$) and line ($Ax + By + C = 0$):  $d = \frac{ \left | Ax_1 + By_1 + C \right | }{\sqrt{A^2 + B^2}} $ \\
+Arc length ($s$) with angle ($\theta$) (rad): $s = r \theta$ \\
+Arc length ($s$) with angle ($\theta$) ($\degree$): $s = 2\pi r \times \frac{\theta}{360}$ \\
+Circumference ($C$) with radius ($r$): $C = 2 \pi r$ \\
+
+\subsection{Examples}
+Question 1: What is the distance between point ($x_1$,$y_1$) and line $y=mx+b$? \\
+\begin{center}    
+    Use distance between point and line formula. \\ 
+    $d = \frac{ \left | Ax_1 + By_1 + C \right | }{\sqrt{A^2 + B^2}} $ \\
+    Recognize line has to be re-written into correct equation structure. \\
+    $y=mx+b$ \\
+    Rearrange equation to $mx - y + b=0$. \\
+    Substitute variables into original equation. \\
+    $d = \frac{ \left | (m)(x_1) + (-1)(y_1) + (b) \right | }{\sqrt{(-m)^2 + (1)^2}} $ \\
+    $d = \frac{ \left | mx_1 - y_1 + b \right |}{\sqrt{m^2 + 1}}$ \\
+\end{center}
+
+\noindent Question 2: I have an inscribed angle $\angle ABC$ of $rd$. What is the arc length $\overset{\frown}{AC}$ in both radians and degrees? \\
+\begin{center}
+    Arc length ($s$) with angle ($\theta$) (rad): $s = r \theta$ \\
+    Arc length ($s$) with angle ($\theta$) ($\degree$): $s = 2\pi r \times \frac{\theta}{360}$ \\
+\end{center}
+
+\subsection{Exercises}
+
+\chapter{Creating Equations}
+
+\begin{table}[h]
+    \centering
+    \caption{Course standards and associated information.}
+    \vspace{0.3cm} % Adds a small gap between caption and table
+    \begin{tabularx}{\textwidth}{l X} % 'll' means two left-aligned columns
+        \toprule
+        \textbf{Standard} & \textbf{Detailed Explanation} \\
+        \midrule
+        None & Create equations that describe numbers or relationships. \\
+        HSA.CED.A.1 & Create equations and ineqalities in one variable and use them to solve problems. Include equations arising from linear and quadratic functions, and simple rational and exponential functions. \\
+        HSA.CED.A.2 & Create equations in two or more variables to represent relationships between quantities, graph equations on coordinate axes with labels and scales. \\
+        HSA.CED.A.3 & Represent constraints by equations or inequalities, and by systems of equations and/or inequalities, and interpret solutions as vaiable or nonviable options in a modeling context. For example, represent inequalities describing nutritional and cost constraints on combinations of different foods. \\
+        HSA.CED.A.4 & Rearrange formulas to highlight a quantity of interest, using the same reasoning as in solving equations. For example, rearrange Ohm's law $V=IR$ to highlight resistance $R$. \\
+        \bottomrule
+    \end{tabularx}
+\end{table}
+
+\chapter{Reasoning with Equations and Inequalities}
+
+\begin{table}[h]
+    \centering
+    \caption{Course standards and associated information.}
+    \vspace{0.3cm} % Adds a small gap between caption and table
+    \begin{tabularx}{\textwidth}{l X} % 'll' means two left-aligned columns
+        \toprule
+        \textbf{Standard} & \textbf{Detailed Explanation} \\
+        \midrule
+        None & Represent and solve equations and inequalities graphically. \\
+        HSA.REI.D.11 & Explain why the x-coordinates of the points where the graphs fo the equations $y=f(x)$ and $y=g(x)$ intersect are the solutions fo the equation $f(x)=g(x)$; find the solutions approximately, e.g., using technology to graph the functions, make tables of values, or find successive approximations. Include cases where $f(x)$ and/or $g(x)$ are linear, polynomial, rational, absolute value, and exponential functions.\\
+        \bottomrule
+    \end{tabularx}
+\end{table}
+
+\chapter{Seeing Structure in Expressions}
+
+\begin{table}[h]
+    \centering
+    \caption{Course standards and associated information.}
+    \vspace{0.3cm} % Adds a small gap between caption and table
+    \begin{tabularx}{\textwidth}{l X} % 'll' means two left-aligned columns
+        \toprule
+        \textbf{Standard} & \textbf{Detailed Explanation} \\
+        \midrule
+        None & Interpret the structure of expressions. \\
+        HSA.SSE.A.1a & Interpret parts of an expression, such as terms, factors, and coefficients \\
+        HSA.SSE.A.1b & Interpret complicated expressions by viewing one or more of their parts as a signle entity. For example, interpret $P(1+r)^n$ as the product of $P$ and a factor not depending on $P$. \\
+        HSA.SSE.A.2 & Use the structure of an expression to identify ways to rewrite it. For example, see $x^4-y^4$ as $(x^2)^2 - (y^2)^2$, thus recognizing it as a difference of squares that can be factored as $(x^2-y^2)(x^2+y^2)$. \\
+        \bottomrule
+    \end{tabularx}
+\end{table}
+
+\chapter{Building Functions}
+
+\begin{table}[h]
+    \centering
+    \caption{Course standards and associated information.}
+    \vspace{0.3cm} % Adds a small gap between caption and table
+    \begin{tabularx}{\textwidth}{l X} % 'll' means two left-aligned columns
+        \toprule
+        \textbf{Standard} & \textbf{Detailed Explanation} \\
+        \midrule
+        None & Build a function that models a relationship between two quantities. \\
+        HSF.BF.A.1 & Write a function that describes a relationship between two quantities. Combine standard function types using arithmetic operations. For example, build a function that models the temperature of a cooling body by adding a constant function to a decaying exponential, and relate these functions to the model. \\
+        None & Build new functions from existing functions. \\
+        HSF.BF.B.3 & Identify the effect on the graph of replacing $f(x)$ by $f(x)+k$, $kf(x)$, $f(kx)$, and $f(x+k)$ for specific values of k (both positive and negative); find the value of $k$ given the graphs. Experiment with cases and illustrate an explanation of the effects on teh graph using technology. Include recognizing even and odd functions from their graphs adn algebraic expressions for them. \\
+        \bottomrule
+    \end{tabularx}
+\end{table}
+
+\chapter{Interpreting Functions}
+
+\begin{table}[h]
+    \centering
+    \caption{Course standards and associated information.}
+    \vspace{0.3cm} % Adds a small gap between caption and table
+    \begin{tabularx}{\textwidth}{l X} % 'll' means two left-aligned columns
+        \toprule
+        \textbf{Standard} & \textbf{Detailed Explanation} \\
+        \midrule
+        None & Interpret functions that arise in applications in terms of the context. \\
+        HSF.IF.B.4 & For a function that models a relationship between two quantities, interpret key features of graphs adn tables in terms of the quantities, and sketch graphs showing key features given a verbal description of the relationship. Key features include: intercepts; intervals where the function is increasing, decreasing, positive, or negative; relative maximums and minimums; symmetries and end behavior. \\
+        HSF.IF.B.5 & Relate the domain of a function to its graph and, where applicable, to the quantitative relationship it describes. For example, if the function $h(n)$ gives the number of person-hours it takes to assemble $n$ engines in a factory, then the positive integers would be an appropriate domain for the function. \\
+        HSF.IF.B.6 & Calculate and interpret the average rate of change of a function (presented symbolically or as a table) over a specified interval. Estimate the rate of change from a graph. \\
+        None & Analyze functions using different representations. \\
+        HSF.IF.C.7.b & Graph square root, cube root, and piecewise-defined functions, including step functions adn absolute value functions. \\
+        HSF.IF.C.7.c & Graph polynomial functions, identifying zeros when suitable factorizations are available, and showing end behavior. \\
+        HSF.IF.C.7.e & Graph exponential and logarithmic functions, showing intercepts adn end behavior, and trigonometric functions, showing period, midline, and amplitude. \\
+        HSF.IF.C.8.a & Use the process of factoring and/or completing the square in a quadratic function to show zeros, extreme values, and symmetry of the graph, and interpret these in terms of a context. \\
+        HSF.IF.C.8.b & Use the properties of exponents to interpret expressions for exponential functions. For example, identify percent rate of change in fucntions such as $y=(1.02)^t$, $y=(0.97)^t$, $y=(1.01)12^t$, $y=(1.2)^t/10$, and classify them as representing exponential growth or decay. \\
+        HSF.IF.C.9 & Compare properties of two functions each represented in a different way (algebraically, graphically, numerically in tables, or by verbal descriptions). For example, given a graph of one quadratic function and an algebraic expression for another, say which has the larger maximum. \\
+        \bottomrule
+    \end{tabularx}
+\end{table}
+
+\chapter{The Complex Number System}
+
+\begin{table}[h]
+    \centering
+    \caption{Course standards and associated information.}
+    \vspace{0.3cm} % Adds a small gap between caption and table
+    \begin{tabularx}{\textwidth}{l X} % 'll' means two left-aligned columns
+        \toprule
+        \textbf{Standard} & \textbf{Detailed Explanation} \\
+        \midrule
+        None & Perform arithmetic operations with complex numbers. \\
+        HSN.CN.A.1 & Know there is a complex number $i$ such as $i^2=-1$, and every complex number has the form $a+bi$ with $a$ and $b$ real. \\
+        None & Use complex numbers in polynomial identities and equations. \\
+        HSN.CN.C.7 & Solve quadratic equations with real coefficients that have complex solutions. \\
+        \bottomrule
+    \end{tabularx}
+\end{table}
+
+\chapter{Concluding Remarks}
+
+That was a lot of information. Congrats on making it this far!
+
+\end{document}
