@@ -11,6 +11,8 @@
 \usepackage{gensymb}
 \usepackage{tabularx}
 \usepackage{amsmath}
+\usepackage{float}
+\usepackage{graphicx}
 
 \usepackage{xcolor}
 \usepackage{hyperref}
@@ -52,7 +54,7 @@
 \mainmatter
 \chapter{Introduction}
 
-The ``Geo-Stats'' course is a full-year course that covers geometry and statistics. Specifically, the course covers the standards outline included \href{web.ped.nm.gov}{here}. This textbook is a collection of notes used for the series presented on North Mesa Math Youtube \href{youtube.com/@NorthMesaMath}{channel}.
+The ``Geo-Stats'' course is a full-year course that covers geometry and statistics. Specifically, the course covers the standards outline included \href{web.ped.nm.gov}{here}. This textbook is a collection of notes used for the series presented on North Mesa Math Youtube \href{youtube.com/@NorthMesaMath}{channel}. The work focuses on three specific student needs: (1) accessible content, (2) free resources, and (3) need-to-know concepts. All content provided on the North Mesa Math Youtube channel and GitHub \href{https://github.com/nkleedtke/NorthMesaMath/}{repository} is free and easily accesible. The figures showing output from a TI-84 calculator were produced using this free TI-84 emulator \href{https://ti84calc.com/ti84calc}{website}. 
 
 \chapter{Congruence}
 
@@ -74,6 +76,15 @@ The ``Geo-Stats'' course is a full-year course that covers geometry and statisti
         \bottomrule
     \end{tabularx}
 \end{table}
+
+Throughout this course you'll be tasked with answering questions related to various geometric shapes. Two of the most common shapes are the circle and the triangle. These shapes are shown in Figure.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{figures/ct.png}
+  \caption{Cricle and triangle.}
+  \label{fig:shapes}
+\end{figure} 
 
 \subsection{Definitions}
 Line 1 and Line 2 are denoted $l_1$ and $l_2$, respectively. \\
@@ -239,6 +250,34 @@ Question 1: What is the distance between point ($x_1$,$y_1$) and line $y=mx+b$? 
         \bottomrule
     \end{tabularx}
 \end{table}
+
+\subsection{Examples}
+Question 1: Your friend has a fair 6-sided die. They want to bet you \$20 that you won't be able to roll a 2 at least 10 times after 30 rolls. Do you take the bet?
+\begin{center}    
+    Solve for the probability of rolling a 2 greater than or equal to 10 times for 30 events, which can be written as P(X$\geq$10). \\
+    P(X$\geq$10) = P(X=10) + P(X=11) + ... + P(X=30) \\
+    Use the complement of P(X$\geq$10) to solve for the quantity. \\ 
+    P(X$\geq$10) = 1 - P(X$\leq$9) \\
+    Use TI-84 calculator to solve for P(X$\leq$9) \\
+    P(X$\geq$10) = 1 - binomcdf(30,$\frac{1}{6}$,9) \\
+     See Figure \ref{fig:ch9q1}.  2nd > distr > B:binomcdf(trials,p,x) \\
+    P(X$\geq$10) = 1 - binomcdf(30,$\frac{1}{6}$,9) = 0.0197062838 \\
+     Don't let your friends fool you. The probability of you rolling a 2 more than 10 times is very low, ~1.97\% to be exact. \\
+\end{center}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.2\textwidth]{figures/ch9q1.png}
+  \caption{Cricle and triangle.}
+  \label{fig:ch9q1}
+\end{figure} 
+
+\noindent Question 2: I have an inscribed angle $\angle ABC$ of $rd$. What is the arc length $\overset{\frown}{AC}$ in both radians and degrees? \\
+\begin{center}
+    Arc length ($s$) with angle ($\theta$) ($\degree$): $s = 2\pi r \times \frac{\theta}{360}$ \\
+\end{center}
+
+\subsection{Exercises}
 
 \chapter{Interpreting Categorical \& Quantitative Data}
 
